@@ -9,3 +9,5 @@ A fork of NVChad V2 with setup for several LSPs and syntax highlighting.
 After opening nvim run:
 
 `:MasonInstallAll`
+
+After the installer finishes, make sure you close NeoVim and reopen it to load the newly installed LSPs.
