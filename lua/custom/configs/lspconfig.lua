@@ -12,7 +12,6 @@ local servers = {
   "golangci_lint_ls",
   "gopls",
   "html",
-  "htmx",
   "rust_analyzer",
   "svelte",
   "vuels"

@@ -21,4 +21,16 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.wo.colorcolumn = '80'
 
+-- https://www.reddit.com/r/neovim/comments/r9q0d9/comment/hniq3xw
+vim.diagnostic.config({
+  virtual_text = false, -- Turning off inline diagnostics in favor of window
+})
+
+vim.o.updatetime = 300
+
+vim.api.nvim_set_keymap(
+  'n', '<Leader>d', ':lua vim.diagnostic.open_float()<CR>',
+  { noremap = true, silent = true }
+)
+
 require "plugins"
