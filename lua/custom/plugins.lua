@@ -20,7 +20,6 @@ local plugins = {
         "svelte-language-server",
         "vue-language-server",
         "html-lsp",
-        "htmx-lsp",
         "rust-analyzer",
       },
     },
