@@ -33,4 +33,7 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+vim.o.number = true
+vim.o.relativenumber = true
+
 require "plugins"
