@@ -24,6 +24,27 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.elixirls.setup {
-  cmd = {"/opt/homebrew/Cellar/elixir-ls/0.22.1/libexec/language_server.sh"};
-}
+local function file_exists(name)
+  local f = io.open(name, "r")
+  if f ~= nil then
+    io.close(f)
+    return true
+  else
+    return false
+  end
+end
+
+local macos_install_location = "/opt/homebrew/Cellar/elixir-ls/0.22.1/libexec/language_server.sh"
+local linux_install_location = "/home/linuxbrew/.linuxbrew/Cellar/elixir-ls/0.22.1/libexec/language_server.sh"
+
+if file_exists(macos_install_location) then
+  lspconfig.elixirls.setup {
+    cmd = {macos_install_location};
+  }
+elseif file_exists(linux_install_location) then
+  lspconfig.elixirls.setup {
+    cmd = {linux_install_location};
+  }
+end
+
+
