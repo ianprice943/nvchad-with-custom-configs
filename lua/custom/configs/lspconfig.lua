@@ -24,8 +24,6 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- lspconfig.elixirls.setup {
---   cmd = {"/opt/homebrew/Cellar/elixir-ls/0.19.0/libexec/language_server.sh"};
--- }
-
-require("elixir").setup()
+lspconfig.elixirls.setup {
+  cmd = {"/opt/homebrew/Cellar/elixir-ls/0.22.1/libexec/language_server.sh"};
+}
