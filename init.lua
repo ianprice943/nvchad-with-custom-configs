@@ -36,4 +36,6 @@ vim.api.nvim_set_keymap(
 vim.o.number = true
 vim.o.relativenumber = true
 
+vim.o.clipboard = "unnamedplus"
+
 require "plugins"
