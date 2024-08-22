@@ -33,6 +33,12 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+-- https://youtu.be/qZO9A5F6BZs?t=384
+vim.api.nvim_set_keymap(
+  'n', '<Leader>p', "\"_dP",
+  { noremap = true, silent = true }
+)
+
 vim.o.number = true
 vim.o.relativenumber = true
 
