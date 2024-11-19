@@ -24,6 +24,12 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+lspconfig.denols.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
+}
+
 local function file_exists(name)
   local f = io.open(name, "r")
   if f ~= nil then
@@ -46,5 +52,3 @@ elseif file_exists(linux_install_location) then
     cmd = {linux_install_location};
   }
 end
-
-
